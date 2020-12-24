@@ -9,7 +9,7 @@ if __name__ == '__main__':
     @bot.message_handler(commands=['start'])
     def reply(message):
         bot.send_message(message.chat.id,
-                         'Привет, я могу подсказать тебе температуру в Минске на данный момент! напиши мне "погода"!')
+                         'Привет, я могу подсказать тебе температуру в Минске на данный момент! Напиши мне "погода"!')
 
 
     @bot.message_handler(content_types=['text'])
