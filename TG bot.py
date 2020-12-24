@@ -2,9 +2,14 @@ import telebot
 import config
 from weather_parser import get_temperatures
 
-
 if __name__ == '__main__':
     bot = telebot.TeleBot(config.TOKEN)
+
+
+    @bot.message_handler(commands=['start'])
+    def reply(message):
+        bot.send_message(message.chat.id,
+                         'Привет, я могу подсказать тебе температуру в Минске на данный момент! напиши мне "погода"!')
 
 
     @bot.message_handler(content_types=['text'])
