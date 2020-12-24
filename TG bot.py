@@ -13,7 +13,9 @@ if __name__ == '__main__':
             temps = get_temperatures()
             temp1 = temps['temp']
             temp2 = temps['temp_feels']
-            bot.send_message(message.chat.id, f'Температура - {temp1} , ощущается как {temp2}')
+            bot.send_message(message.chat.id, f'Температура  {temp1} , ощущается как  {temp2}')
+        else:
+            bot.send_message(message.chat.id, 'Напиши мне "погода"!')
 
 
     bot.polling(none_stop=True)
